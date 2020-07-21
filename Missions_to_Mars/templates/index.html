@@ -36,14 +36,14 @@
           <div class="card" style="width: 20rem;">
             <div class="card-body text-white bg-dark">
               <h5 class="card-title">Current Weather on Mars</h5>
-              <p class="card-text">{{data.mars_weather}}</p>
+              <p class="card-text">{{}}</p>
               
             </div>
           </div>
           <!-- Table -->
           <br>
           <h5>Mars Facts</h5>
-          <table>{{ data.mars_facts|safe}}</table>
+          <table>{{ }}</table>
 
         </div>
       </div>
@@ -52,12 +52,12 @@
     <div class='card-deck'>
       <div class='col-md-12'>
           <div class="row">
-              {% for item in data.hemisphere_img_urls %}
+              {% for item in  %}
               <div class="col-md-6">
                   <div class="card text-white bg-dark" style="margin: 30px;">
                       <img class="card-img-top" src="{{item.img_url}}" />
                       <div class="card-body">
-                          <p class="card-text">{{ item.title }}</p>
+                          <p class="card-text">{{ }}</p>
                       </div>
                   </div>
               </div>
