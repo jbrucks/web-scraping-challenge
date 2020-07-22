@@ -15,17 +15,11 @@
             <p><a class="btn btn-outline-danger btn-lg" href="/scrape" role="button">Find out about Mars!</a></p>
         </div>
         <!-- Mars News -->
-        <div class="container">
-            <div class="row" id="mars-news">
-                <div class="media">
-                    <div class="media-body">
-                        <h4>Latest Mars News</h4>
-                        <h5>{{mars_info.news_title}}</h5>
-                        <p>{{mars_info.news_p}}</p>
-                    </div>
-                </div>
-            </div>
-        </div>   
+        <div class="jumbotron bg-white">
+            <h1 class="display-6">Latest Mars News</h1>
+            <p class="lead">{{mars_info.news_title}}</p>
+            <p>{{mars_info.news_p}}</p>
+          </div>  
         <!-- Featured Image -->
         <div class="container">
             <div class="row" id="mars-featured-image">
