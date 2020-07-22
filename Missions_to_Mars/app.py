@@ -20,7 +20,7 @@ def scrape():
     
     mars_info = mongo.db.mars_info  
 
-    mars_parts = sprape_mars.mars_scrape()
+    mars_parts = scrape_mars.mars_scrape()
 
     # mars_parts = {
     #     'news_title': scrape_mars.mars_news_scrape(),
