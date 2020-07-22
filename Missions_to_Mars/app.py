@@ -17,13 +17,18 @@ def index():
 
 @app.route("/scrape")
 def scrape():  
+    
     mars_info = mongo.db.mars_info  
 
-    mars_parts = scrape_mars.mars_news_scrape()
-    mars_parts = scrape_mars.mars_feature_img_scrape()
-    mars_parts = scrape_mars.mars_weather()
-    mars_parts = scrape_mars.mars_facts()
-    mars_parts = scrape_mars.mars_hemis()
+    mars_parts = sprape_mars.mars_scrape()
+
+    # mars_parts = {
+    #     'news_title': scrape_mars.mars_news_scrape(),
+    #     'feature_photo_url' : scrape_mars.mars_feature_img_scrape(),
+    #     'mars_weather' : scrape_mars.mars_weather(),
+    #     'mars_html_table' : scrape_mars.mars_facts(),
+    #     'hemisphere_img_urls' : scrape_mars.mars_hemis()
+    # }
 
     mars_info.update({}, mars_parts, upsert=True)
 
