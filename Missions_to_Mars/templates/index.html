@@ -34,7 +34,7 @@
         </div>
         <div class="col-lg-4 col-md-4 col-sm-6 col-xm-12">
           <div class="card" style="width: 20rem;">
-            <div class="card-body text-white bg-dark">
+            <div class="card-body">
               <h5 class="card-title">Current Weather on Mars</h5>
               <p class="card-text">{{}}</p>
               
@@ -47,14 +47,14 @@
 
         </div>
       </div>
-    </div><!---container for image and table closed-->
+    </div>
     <h3 style="padding-top:30px; text-align: center;">Mars Hemispheres</h3>
     <div class='card-deck'>
       <div class='col-md-12'>
           <div class="row">
               {% for item in  %}
               <div class="col-md-6">
-                  <div class="card text-white bg-dark" style="margin: 30px;">
+                  <div class="card" style="margin: 30px;">
                       <img class="card-img-top" src="{{item.img_url}}" />
                       <div class="card-body">
                           <p class="card-text">{{ }}</p>
