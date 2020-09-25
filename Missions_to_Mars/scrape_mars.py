@@ -89,8 +89,10 @@ def mars_scrape():
 
     all_hemis = hemis_soup.find_all('div', class_='description')
 
+    hemisphere_img_urls = []
+
     for hemis in all_hemis:
-        hemisphere_img_urls = []
+        # hemisphere_img_urls = []
 
         base_url = "https://astrogeology.usgs.gov"
         title = hemis.find('h3').text
@@ -103,7 +105,12 @@ def mars_scrape():
         hem_soup = BeautifulSoup(hem_html, 'html.parser')
         hemis_full_link = hem_soup.find('li').find('a')['href']
     
-        hemisphere_img_urls.append(dict({'title':title, 'img_url':hemis_full_link}))
+        hemisphere_img_urls.append(dict({'title': title, 'img_url': hemis_full_link}
+        # {'title': title[0], 'img_url': hemis_full_link[0]},
+        # {'title': title[1], 'img_url': hemis_full_link[1]},
+        # {'title': title[2], 'img_url': hemis_full_link[2]},
+        # {'title': title[3], 'img_url': hemis_full_link[3]}
+        ))
         
     mars_parts['hemisphere_img_urls'] = hemisphere_img_urls
 
